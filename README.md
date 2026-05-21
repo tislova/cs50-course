@@ -86,20 +86,46 @@ and web development.
 
 ## Running the Code
 
-**C programs:**
+### C programs (Weeks 1–5)
+
 ```bash
 clang -o mario mario.c
 ./mario
 ```
 
-**Python scripts:**
+For programs that use `math.h` (like `readability.c`), link the math library:
+
+```bash
+clang -o readability readability.c -lm
+./readability
+```
+
+### Python scripts (Week 6)
+
 ```bash
 python3 readability.py
 ```
 
-**Flask apps (finance, birthdays):**
+### SQL queries (Week 7)
+
+Open the SQLite database and run queries:
+
+```bash
+sqlite3 fiftyville/fiftyville.db
+```
+
+### Flask apps (Week 9)
+
 ```bash
 cd finance/
 pip install -r requirements.txt
 flask run
 ```
+
+```bash
+cd birthdays/
+pip install flask cs50
+flask run
+```
+
+Both apps will be available at `http://localhost:5000`.
